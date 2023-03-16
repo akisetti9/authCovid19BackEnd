@@ -1,0 +1,56 @@
+### API-1 To Login the User
+POST  http://localhost:3000/login/
+Content-Type: application/json 
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+
+### API-2 Returns all states
+GET  http://localhost:3000/states/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4OTc3ODg2fQ.oubaNvxf2OJf_BlgAw7YjmFIKetBNHdcACAA5GVwzsg
+
+### API-3 Returns particular state
+GET  http://localhost:3000/states/8/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4OTc3ODg2fQ.oubaNvxf2OJf_BlgAw7YjmFIKetBNHdcACAA5GVwzsg
+
+### API-4 Adds a new district
+POST  http://localhost:3000/districts/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4OTc3ODg2fQ.oubaNvxf2OJf_BlgAw7YjmFIKetBNHdcACAA5GVwzsg
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+### API-5 Returns a particular district
+GET  http://localhost:3000/districts/5/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4OTc3ODg2fQ.oubaNvxf2OJf_BlgAw7YjmFIKetBNHdcACAA5GVwzsg
+
+### API-6 Delete a particular district
+DELETE  http://localhost:3000/districts/1/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4OTc3ODg2fQ.oubaNvxf2OJf_BlgAw7YjmFIKetBNHdcACAA5GVwzsg
+
+### API-7 Updates a particular district
+PUT  http://localhost:3000/districts/1/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4OTc3ODg2fQ.oubaNvxf2OJf_BlgAw7YjmFIKetBNHdcACAA5GVwzsg
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+### API-8 Returns a particular states statistics
+GET  http://localhost:3000/states/8/stats/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc4OTc3ODg2fQ.oubaNvxf2OJf_BlgAw7YjmFIKetBNHdcACAA5GVwzsg
